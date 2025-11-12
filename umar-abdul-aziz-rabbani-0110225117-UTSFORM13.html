@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .search-area {
+            margin-bottom: 25px;
+        }
+
+        .search-area span {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .search-icon {
+            padding: 10px;
+            background: #eee;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+        }
+
+        form .form-row {
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form span {
+            display: block;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .upload-field .file-input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .file-input-group input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .file-input-group button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .file-input-group button:hover {
+            background: #0056b3;
+        }
+
+        .button-area {
+            text-align: center;
+        }
+
+        .btn-daftar {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 10px;
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-daftar:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="search-area">
+            <span>Cari Sivitas Akademika</span>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="search">
+            </div>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="form-row">
+                <label>Nama Lengkap :</label>
+                <span>Nama Mahasiswa / Dosen</span>
+            </div>
+            <div class="form-row">
+                <label>Asal Prodi :</label>
+                <span>Asal Prodi</span>
+            </div>
+            <div class="form-row">
+                <label>Status :</label>
+                <span>Mahasiswa / Dosen</span>
+            </div>
+            
+            <div class="form-row">
+                <label>Jenis Kendaraan :</label>
+                <div class="radio-group">
+                    <input type="radio" id="motor" name="jenis_kendaraan" value="Motor" checked>
+                    <label for="motor">Motor</label>
+                    <input type="radio" id="mobil" name="jenis_kendaraan" value="Mobil">
+                    <label for="mobil">Mobil</label>
+                </div>
+            </div>
+
+            <div class="form-row input-field">
+                <label for="nopol">NoPol</label>
+                <input type="text" id="nopol" name="nopol">
+            </div>
+            <div class="form-row input-field">
+                <label for="merk">Merk</label>
+                <input type="text" id="merk" name="merk">
+            </div>
+
+            <div class="form-row upload-field">
+                <label for="stnk">Upload STNK</label>
+                <div class="file-input-group">
+                    <input type="text" readonly placeholder="">
+                    <input type="file" id="stnk_file" name="stnk" style="display: none;">
+                </div>
+            </div>
+
+            <div class="button-area">
+                <button type="submit" class="btn-daftar">Daftar</button>
+                <button type="submit" class="btn-daftar">Browse</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
